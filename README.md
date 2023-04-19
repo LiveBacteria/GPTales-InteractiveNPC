@@ -1,6 +1,6 @@
 # GPTales-InteractiveNPCs
 
-GPTales-InteractiveNPCs enriches RPG Maker by integrating OpenAI's GPT into NPCs, offering immersive experiences with intelligent dialogue and adaptive behaviors.
+GPTales-InteractiveNPCs is an innovative RPG Maker project that harnesses the power of OpenAI's GPT technology to breathe life into the game's non-playable characters (NPCs). By integrating advanced language models, this project aims to create an immersive, dynamic, and interactive world where NPCs exhibit diverse personalities, react intelligently to player interactions, and contribute to the richness of the game's narrative. Players will experience a more engaging and responsive environment, as the NPCs dynamically adapt their dialogue, behaviors, and stories, shaping the game world according to each player's choices and actions. GPTales-InteractiveNPCs redefines the boundaries of RPG Maker games by offering a uniquely lifelike and captivating experience for both seasoned players and newcomers alike.
 
 ## Table of Contents
 
