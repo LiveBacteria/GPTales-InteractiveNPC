@@ -1,8 +1,8 @@
 /*:
  * @target MZ
  * @author LiveBacteria
- * @plugindesc This is a demo plugin.
- * @help This is a demo plugin.
+ * @plugindesc This plugin can be used to execute various NPC utility functions.
+ * @help This plugin can be used to execute various NPC utility functions.
  *
  * @command npcSpeak
  * @text npcSpeak
@@ -44,6 +44,9 @@
  */
 
 (() => {
+  // Use this to call the plugin commands from other plugins.
+  // PluginManager.callCommand(self, 'npcUtils', 'spawnNPC',[])
+
   // Doesn't work at this time due to the way the plugin manager works.
   // Will likely need to call to an external reference for function calls instead.
   PluginManager.registerCommand("npcUtils", "npcSpeak", function (args) {
