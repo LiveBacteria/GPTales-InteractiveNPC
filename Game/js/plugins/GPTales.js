@@ -17,3 +17,7 @@ const main = function () {
 
   cardinal.start();
 };
+
+exports.main = main;
+
+main();
