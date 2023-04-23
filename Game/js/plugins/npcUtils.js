@@ -47,14 +47,37 @@
  * @text Map ID of Spawn Map
  * @desc The ID of the map where the Event resides.
  * @default 0
+ *
+ * @command npcMove
+ * @text npcMove
+ * @desc Makes the NPC move a specifed direciton.
+ *
+ * @arg eventId
+ * @type number
+ * @text Event ID
+ * @desc The ID of the event to make speak.
+ * @default 1
+ *
+ * @arg direction
+ * @type select
+ * @option Down
+ * @value 2
+ * @option Left
+ * @value 4
+ * @option Right
+ * @value 6
+ * @option Up
+ * @value 8
+ * @text Direction
+ * @desc The direction to move the event in.
+ * @default 2
+ *
  */
 
 (() => {
   // Use this to call the plugin commands from other plugins.
   // PluginManager.callCommand(self, 'npcUtils', 'spawnNPC',{x: 1, y: 6, mapTarget: 1, eventId: 1})
 
-  // Doesn't work at this time due to the way the plugin manager works.
-  // Will likely need to call to an external reference for function calls instead.
   PluginManager.registerCommand("npcUtils", "npcSpeak", function (args) {
     const eventId = Number(args.eventId);
     const npcEvent = $gameMap.event(eventId);
@@ -85,6 +108,18 @@
     Galv.SPAWN.event(eventId, "xy", [x, y], "all", true, mapTarget);
     appendNPCFunctions($gameMap._lastSpawnEventId);
     // If needed: $gameMap._lastSpawnEventId
+  });
+
+  PluginManager.registerCommand("npcUtils", "npcMove", function (args) {
+    const eventId = Number(args.eventId);
+    const direction = Number(args.direction);
+    const event = $gameMap.event(eventId);
+
+    if (event) {
+      event.moveStraight(direction);
+    } else {
+      console.warn(`Event with ID ${eventId} not found.`);
+    }
   });
 })();
 
