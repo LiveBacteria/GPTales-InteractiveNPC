@@ -43,7 +43,7 @@ The Cardinal System observes the game state and issues contextually relevant com
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YourUsername/GPTales-InteractiveNPCs.git
+git clone https://github.com/LiveBacteria/GPTales-InteractiveNPCs.git
 ```
 
 2. Install the necessary dependencies:
